@@ -1,0 +1,1 @@
+from app.get_class import app

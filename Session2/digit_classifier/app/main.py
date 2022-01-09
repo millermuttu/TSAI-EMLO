@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-from app.torch_utils import transform_image, get_prediction
+from torch_utils import transform_image, get_prediction
 
 app = Flask(__name__)
 
@@ -27,3 +27,7 @@ def predict():
             return jsonify(data)
         except:
             return jsonify({'error': 'error during prediction'})
+
+
+if __name__ == '__main__':
+   app.run(debug = True)
